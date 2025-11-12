@@ -1,6 +1,6 @@
 import { z } from 'zod/v4'
 
-export const pagesSchema = z.object({
+export const homeSchema = z.object({
   title: z.string().default('Home'),
   count: z.number().int().nonnegative().default(0),
   image: z.string().url().or(z.string()),
@@ -10,7 +10,7 @@ export const pagesSchema = z.object({
       z.object({
         image: z.string().url().or(z.string()),
         text: z.string(),
-        value: z.number(),
+        value: z.number().nonnegative(),
       })
     )
     .default([]),
