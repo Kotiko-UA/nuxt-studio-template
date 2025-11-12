@@ -1,3 +1,17 @@
 {
-  "heroTitle": "Title from content"
+  "title": "Welcome to our site",
+  "count": 3,
+  "image": "images/kit-stepan.jpg",
+  "list": [
+    {
+      "image": "/team/alex.png",
+      "text": "Alex — Lead Designer",
+      "value": 12
+    },
+    {
+      "image": "/team/olga.png",
+      "text": "Olga — PM",
+      "value": 7
+    }
+  ]
 }
