@@ -47,6 +47,11 @@ export default defineNuxtConfig({
   content: {
     preview: {
       api: 'https://api.nuxt.studio',
+      gitInfo: {
+        name: 'nuxt-studio-template',
+        owner: 'Kotiko-UA',
+        url: 'https://github.com/Kotiko-UA/nuxt-studio-template',
+      },
     },
   },
 })
