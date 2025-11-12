@@ -1,0 +1,1 @@
+export { homeSchema } from './home'

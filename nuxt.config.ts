@@ -38,8 +38,6 @@ export default defineNuxtConfig({
       api: 'https://api.nuxt.studio',
     },
   },
-  app: { baseURL: '/nuxt-studio-template/' },
-  nitro: { preset: 'github-pages' },
   runtimeConfig: {
     public: {
       nuxtStudioAPI: process.env.NUXT_PUBLIC_STUDIO_API,
