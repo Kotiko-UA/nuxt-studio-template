@@ -63,7 +63,9 @@ jobs:
         env:
           NITRO_PRESET: github_pages
           NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
-          
+          NUXT_PUBLIC_API_BASE_URL: ${{ secrets.NUXT_PUBLIC_API_BASE_URL }}
+NUXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NUXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+NUXT_PUBLIC_STUDIO_API: ${{ secrets.NUXT_PUBLIC_STUDIO_API }}
 
       # Deployment job
       - name: Deploy 🚀
