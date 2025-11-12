@@ -1,8 +1,8 @@
 {
   "title": "Welcome to our site cool it",
-  "count": 1505,
-  "image": "/images/123.jpg",
-  "image_second": "images/red_cat_2.jpg",
+  "count": "1111",
+  "image": "/images/red_cat_2.jpg",
+  "image_second": "/images/kit-stepan.jpg",
   "list": [
     {
       "image": "images/kit-stepan.jpg",
