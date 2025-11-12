@@ -9,7 +9,6 @@ type HomeData = {
 
 const { data: home } = await useAsyncData<HomeData | null>('home', async () => {
   const entry = await queryCollection('home').first()
-  // У type: 'data' фактичні поля лежать у meta.body (вже з правильними типами)
   return (entry?.meta?.body ?? null) as HomeData | null
 })
 </script>
@@ -19,7 +18,7 @@ const { data: home } = await useAsyncData<HomeData | null>('home', async () => {
     <h1>{{ home.title }}</h1>
     <p>Count: {{ home.count }}</p>
     <img :src="home.image" alt="" />
-    <div v-for="item in home.list">
+    <div v-for="(item, i) in home.list" :key="`${item.text}-${i + 1}`">
       <div>{{ item.text }}</div>
       <div>{{ item.value }}</div>
     </div>
