@@ -1,0 +1,1 @@
+import{O as s,U as a,V as t,W as o,X as r,a as n,r as u,b as c,g as i,l}from"#entry";const d=s({__name:"Login",setup(p){a(),t(),o();const e=()=>({email:"",password:""});return r(),n(),u(e()),c(!1),(_,m)=>(l(),i("div",null,"login"))}});export{d as default};

@@ -1,0 +1,1 @@
+import{_ as a,g as s,l as r,a0 as t}from"#entry";const n={};function o(e,l){return r(),s("table",null,[t(e.$slots,"default")])}const _=Object.assign(a(n,[["render",o]]),{__name:"ProseTable"});export{_ as default};
