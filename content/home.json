@@ -2,14 +2,15 @@
   "title": "Welcome to our site",
   "count": 3,
   "image": "images/kit-stepan.jpg",
+  "image_second": "images/red_cat_2.jpg",
   "list": [
     {
-      "image": "/team/alex.png",
+      "image": "images/kit-stepan.jpg",
       "text": "Alex — Lead Designer",
       "value": 12
     },
     {
-      "image": "/team/olga.png",
+      "image": "images/red_cat_2.jpg",
       "text": "Olga — PM",
       "value": 7
     }
