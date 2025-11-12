@@ -33,6 +33,11 @@ export default defineNuxtConfig({
       styles: ['normal', 'italic'],
     },
   },
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio',
+    },
+  },
   runtimeConfig: {
     public: {
       nuxtStudioAPI: process.env.NUXT_PUBLIC_STUDIO_API,
@@ -43,10 +48,5 @@ export default defineNuxtConfig({
   ssr: true,
   routeRules: {
     '/auth/**': { ssr: false },
-  },
-  content: {
-    preview: {
-      api: 'https://api.nuxt.studio',
-    },
   },
 })

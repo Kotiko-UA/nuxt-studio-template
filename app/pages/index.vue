@@ -7,15 +7,16 @@ type HomeData = {
   list: { image: string; text: string; value: number }[]
 }
 
-const entry = (await queryCollection('home').first()) as HomeData | null
+const entry = await queryCollection('home').first()
+const home = (entry?.meta?.body ?? null) as HomeData | null
 </script>
 
 <template>
-  <section v-if="entry">
-    <h1>{{ entry.title }}</h1>
-    <p>Count: {{ entry.count }}</p>
-    <img :src="entry.image" alt="" />
-    <div v-for="(item, i) in entry.list" :key="`${item.text}-${i + 1}`">
+  <section v-if="home">
+    <h1>{{ home.title }}</h1>
+    <p>Count: {{ home.count }}</p>
+    <img :src="home.image" alt="" />
+    <div v-for="(item, i) in home.list" :key="`${item.text}-${i + 1}`">
       <div>{{ item.text }}</div>
       <div>{{ item.value }}</div>
     </div>
