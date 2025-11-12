@@ -1,17 +1,17 @@
 {
-  "title": "Welcome to our site cool it",
-  "count": "1111",
-  "image": "/images/red_cat_2.jpg",
+  "title": "Banana",
+  "count": null,
+  "image": "/images/kit-stepan.jpg",
   "image_second": "/images/kit-stepan.jpg",
   "list": [
     {
       "image": "images/kit-stepan.jpg",
-      "text": "Alex — Lead Designer",
+      "text": "Alex — Lead Designer 111",
       "value": 12
     },
     {
       "image": "images/red_cat_2.jpg",
-      "text": "Olga — PM",
+      "text": "Olga — PM 111",
       "value": 7
     }
   ]
