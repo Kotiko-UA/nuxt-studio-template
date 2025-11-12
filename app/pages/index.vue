@@ -10,13 +10,15 @@ type HomeData = {
 const { data: home } = await useAsyncData<HomeData | null>(
   'home-data',
   async () => {
-    const entry = await queryCollection('home').first() // <-- однаковий запит для SSR/CSR
-    return (entry?.meta?.body ?? null) as HomeData | null // <-- беремо ТІЛЬКИ meta.body
+    const entry = await queryCollection('home').first()
+    return (entry?.meta?.body ?? null) as HomeData | null
   },
   {
-    server: true, // рендеримо на сервері
-    lazy: false, // не відкладати
+    server: true,
+    lazy: false,
     default: () => null,
+    // щоб не було клієнтського refetch після SSR
+    transform: d => d,
   }
 )
 </script>
