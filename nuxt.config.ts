@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    '@nuxt/content',
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/scripts',
@@ -24,6 +25,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
     'nuxt-toast',
+    'nuxt-studio',
   ],
   fonts: {
     defaults: {
@@ -33,6 +35,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      nuxtStudioAPI: process.env.NUXT_PUBLIC_STUDIO_API,
       apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL,
       recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY,
     },
