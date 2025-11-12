@@ -2,7 +2,7 @@ import { z } from 'zod/v4'
 
 export const homeSchema = z.object({
   title: z.string().default('Home'),
-  count: z.number().int().nonnegative().default(0),
+  count: z.number().nonnegative().default(0),
   image: z.string().url().or(z.string()),
   image_second: z.string().url().or(z.string()).default('images/red_cat_2.jpg'),
   list: z
