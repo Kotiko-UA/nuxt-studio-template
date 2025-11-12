@@ -7,10 +7,18 @@ type HomeData = {
   list: { image: string; text: string; value: number }[]
 }
 
-const { data: home } = await useAsyncData<HomeData | null>('home', async () => {
-  const entry = await queryCollection('home').first()
-  return (entry?.meta?.body ?? null) as HomeData | null
-})
+const { data: home } = await useAsyncData<HomeData | null>(
+  'home-data',
+  async () => {
+    const entry = await queryCollection('home').first() // <-- однаковий запит для SSR/CSR
+    return (entry?.meta?.body ?? null) as HomeData | null // <-- беремо ТІЛЬКИ meta.body
+  },
+  {
+    server: true, // рендеримо на сервері
+    lazy: false, // не відкладати
+    default: () => null,
+  }
+)
 </script>
 
 <template>
