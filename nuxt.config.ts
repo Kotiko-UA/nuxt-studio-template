@@ -18,6 +18,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/content',
+    'nuxt-studio',
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/scripts',
@@ -25,7 +26,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
     'nuxt-toast',
-    'nuxt-studio',
   ],
   fonts: {
     defaults: {
