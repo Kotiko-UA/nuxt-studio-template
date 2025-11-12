@@ -1,5 +1,5 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content'
-import { homeSchema } from '~/content/schemas'
+import { homeSchema } from './content/schemas'
 
 export default defineContentConfig({
   collections: {
